@@ -37,9 +37,25 @@
 
 ## 🚀 How to Use
 
-- ***Enter a password in the input field.***
-- ***Click the "eye" icon (or button) to toggle between showing and hiding the password.***
-- ***The password will either be shown in plain text or hidden as dots (or asterisks) based on the toggle.***
+- ***Open the `index.html` file in your browser.***
+- ***Type the text you want to convert into speech into the text input field.***
+- ***Adjust the voice rate and pitch sliders if necessary.***
+- ***Click on the **Speak** button to hear the text being spoken.***
+
+## 🚀 Example Code
+
+Here’s a basic example of the JavaScript functionality using the Web Speech API:
+
+```javascript
+const synth = window.speechSynthesis;
+const speakButton = document.getElementById('speak');
+const textInput = document.getElementById('text-input');
+
+speakButton.addEventListener('click', () => {
+  const utterance = new SpeechSynthesisUtterance(textInput.value);
+  synth.speak(utterance);
+});
+```
 
 ## 🚀 Project Setup
 
